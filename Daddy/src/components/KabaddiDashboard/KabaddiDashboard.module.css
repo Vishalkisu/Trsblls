@@ -1,0 +1,153 @@
+.dashboard {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sportIcon {
+  color: #ff6b6b;
+}
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.matchCard {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.matchCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status {
+  color: #dc3545;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.competition {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.bookmark {
+  color: #adb5bd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.bookmarked {
+  color: #ffd700;
+}
+
+.matchInfo {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teams span {
+  color: #212529;
+  font-weight: 500;
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+  text-align: center;
+}
+
+.odds {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.oddsButton {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.oddsButton:hover:not(.locked) {
+  background-color: #e9ecef;
+}
+
+.oddsValues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.oddsValues span:first-child {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.oddsValues span:last-child {
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+.locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lockIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #6c757d;
+}
+
+.additionalInfo {
+  margin-top: 10px;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+}

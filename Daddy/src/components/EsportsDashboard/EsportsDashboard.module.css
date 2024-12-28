@@ -1,0 +1,391 @@
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.sportIcon {
+  color: #7b1fa2;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: #7b1fa2;
+  color: white;
+}
+
+.matchesContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.matchCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #7b1fa2;
+}
+
+.matchCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.matchInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.game {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.event {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.competition {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.bookmark {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.active {
+  color: #ffd700;
+}
+
+.matchDetails {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-size: 14px;
+  color: #7b1fa2;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.status.live {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.format {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.type {
+  font-weight: 600;
+  color: #7b1fa2;
+}
+
+.currentMap {
+  text-align: right;
+  color: #333;
+}
+
+.score {
+  font-weight: 600;
+  font-size: 18px;
+  color: #7b1fa2;
+}
+
+.stage {
+  text-align: right;
+}
+
+.gameState {
+  background-color: #f3e5f5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7b1fa2;
+  margin-bottom: 8px;
+}
+
+.goldDiff {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.objectives {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.team:hover {
+  background-color: #f0f0f0;
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teamName {
+  font-weight: 600;
+  color: #333;
+}
+
+.region {
+  font-size: 12px;
+  color: #666;
+}
+
+.teamScore {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7b1fa2;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.market {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.marketName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.optionName {
+  font-size: 14px;
+  color: #666;
+}
+
+.oddsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.oddsValue {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.oddsValue.back {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.oddsValue.back:hover {
+  background-color: #7b1fa2;
+  color: white;
+  border-color: #7b1fa2;
+}
+
+.oddsValue.lay {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+.oddsValue.lay:hover {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.oddsValue.locked {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockIcon {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .filterButton {
+    white-space: nowrap;
+  }
+
+  .matchCard {
+    padding: 12px;
+  }
+
+  .format {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .currentMap, .stage {
+    text-align: left;
+  }
+
+  .objectives {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .team {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .teamInfo {
+    width: 100%;
+    order: 1;
+  }
+
+  .oddsBox {
+    width: 100%;
+    order: 2;
+  }
+
+  .markets {
+    gap: 8px;
+  }
+
+  .option {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .optionName {
+    width: 100%;
+  }
+
+  .oddsValue {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,128 @@
+.filterWrapper {
+  width: calc(100% - 17.5% - 300px);
+  margin-left: 17.5%;
+  margin-right: 300px;
+  margin-top: 1px;
+}
+
+.filterContainer {
+  width: 100%;
+  background: #151515;
+  padding: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 0 20px;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(76, 175, 80, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+.filters::-webkit-scrollbar {
+  height: 6px;
+}
+
+.filters::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.filters::-webkit-scrollbar-thumb:hover {
+  background: rgba(76, 175, 80, 0.5);
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterItem:hover {
+  background: #252525;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+  border-color: #4caf50;
+}
+
+.filterItem:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #4caf50;
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-left: 6px;
+  transition: background 0.2s ease;
+}
+
+.filterItem:hover .count {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+/* Media query for tablet screens */
+@media screen and (max-width: 1024px) {
+  .filterWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+  .filterWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .filterItem {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .count {
+    min-width: 18px;
+    height: 18px;
+    font-size: 0.75rem;
+  }
+}

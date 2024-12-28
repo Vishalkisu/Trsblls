@@ -1,0 +1,334 @@
+.container {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff8f3;
+    min-height: calc(100vh - 120px);
+}
+
+.title {
+    color: #ff6b00;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(255, 107, 0, 0.1);
+}
+
+.searchContainer {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 15px 45px;
+    border: 2px solid #ffe0cc;
+    border-radius: 30px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.1);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #ff6b00;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.15);
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6b00;
+    font-size: 1.2rem;
+}
+
+.content {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filterSection {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.1);
+}
+
+.filterSection h3 {
+    color: #333;
+    margin: 0 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.filterList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #fff8f3;
+    color: #333;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+    background: #ffe0cc;
+}
+
+.filterButton.active {
+    background: #ff6b00;
+    color: white;
+}
+
+.filterButton .count {
+    background: rgba(255, 107, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.filterButton.active .count {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gamesGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.gameCard {
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gameCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gameCard:hover .imageContainer img {
+    transform: scale(1.1);
+}
+
+.gameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 248, 243, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.gameCard:hover .gameOverlay {
+    opacity: 1;
+}
+
+.gameInfo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gameInfo h3 {
+    color: #ff6b00;
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.prizePool, .entryFee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.prizePool svg, .entryFee svg {
+    color: #ff6b00;
+    font-size: 1.2rem;
+}
+
+.prizePool span, .entryFee span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.prizePool strong, .entryFee strong {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.teamInfo {
+    width: 100%;
+    max-width: 200px;
+}
+
+.progress {
+    height: 6px;
+    background: #ffe0cc;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background: #ff6b00;
+    transition: width 0.3s ease;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.teams svg {
+    color: #ff6b00;
+}
+
+.joinButton, .loginButton {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    letter-spacing: 0.5px;
+}
+
+.gameCard:hover .joinButton,
+.gameCard:hover .loginButton {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.joinButton:hover,
+.loginButton:hover {
+    background: #ff8533;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.featuredBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b00;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .filterList {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .gamesGrid {
+        grid-template-columns: 1fr;
+    }
+}

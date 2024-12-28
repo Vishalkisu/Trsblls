@@ -1,0 +1,96 @@
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1);
+    border: 1px solid #ffe0cc;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebarTitle {
+    color: #ff6b00;
+    margin: 0 0 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ffe0cc;
+}
+
+.providerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.providerItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #666;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.providerItem:hover {
+    background: #fff8f3;
+    color: #ff6b00;
+    border-color: #ffe0cc;
+}
+
+.providerItem.active {
+    background: #ff6b00;
+    color: white;
+    border-color: #ff6b00;
+}
+
+.gameCount {
+    background: rgba(255, 107, 0, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #ff6b00;
+    transition: all 0.2s ease;
+}
+
+.providerItem.active .gameCount {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 240px;
+        padding: 15px;
+    }
+
+    .sidebarTitle {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+
+    .providerItem {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .gameCount {
+        padding: 3px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

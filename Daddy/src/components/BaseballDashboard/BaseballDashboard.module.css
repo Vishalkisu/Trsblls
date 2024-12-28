@@ -1,0 +1,176 @@
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.sportIcon {
+  color: #1a73e8;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.matchesContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.matchCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.competition {
+  font-size: 14px;
+  color: #666;
+}
+
+.bookmark {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.active {
+  color: #ffd700;
+}
+
+.matchInfo {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+.teams {
+  margin-bottom: 8px;
+}
+
+.team {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.score {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+.additionalInfo {
+  font-size: 14px;
+  color: #666;
+}
+
+.oddsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.oddsColumn {
+  text-align: center;
+}
+
+.oddsHeader {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.oddsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oddsValue {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.oddsValue.back {
+  background-color: #e3f2fd;
+  color: #1a73e8;
+}
+
+.oddsValue.back:hover {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.oddsValue.lay {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+.oddsValue.lay:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+.oddsValue.locked {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.lockIcon {
+  font-size: 12px;
+}

@@ -1,0 +1,432 @@
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.sportIcon {
+  color: #4caf50;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.matchesContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.matchCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #4caf50;
+}
+
+.matchCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.matchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.matchInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.competition {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.venueInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.venue {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.surface {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bookmark {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.active {
+  color: #ffd700;
+}
+
+.matchDetails {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-size: 14px;
+  color: #4caf50;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.status.live {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.scoreBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.currentScore {
+  display: flex;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+.quarterScores {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.quarterScore {
+  font-size: 14px;
+  color: #666;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statItem span:first-child {
+  font-size: 12px;
+  color: #666;
+}
+
+.statItem span:last-child {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cards {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.cardItem {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+}
+
+.greenCard {
+  color: #4caf50;
+}
+
+.yellowCard {
+  color: #ffc107;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.team:hover {
+  background-color: #f0f0f0;
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teamName {
+  font-weight: 600;
+  color: #333;
+}
+
+.teamDetails {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.country {
+  padding-right: 8px;
+  border-right: 1px solid #ddd;
+}
+
+.rank {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.market {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.marketName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.optionName {
+  font-size: 14px;
+  color: #666;
+}
+
+.oddsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.oddsValue {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.oddsValue.back {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+
+.oddsValue.back:hover {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.oddsValue.lay {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+.oddsValue.lay:hover {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.oddsValue.locked {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockIcon {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .filterButton {
+    white-space: nowrap;
+  }
+
+  .matchCard {
+    padding: 12px;
+  }
+
+  .statistics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .team {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .teamInfo {
+    width: 100%;
+    order: 1;
+  }
+
+  .teamDetails {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .country {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .oddsBox {
+    width: 100%;
+    order: 2;
+  }
+
+  .markets {
+    gap: 8px;
+  }
+
+  .option {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .optionName {
+    width: 100%;
+  }
+
+  .oddsValue {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

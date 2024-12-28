@@ -1,0 +1,482 @@
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.sportIcon {
+  color: #00bcd4;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.eventsContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.eventCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #00bcd4;
+}
+
+.eventCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.competition {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.venueInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.venue {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.location {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bookmark {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.active {
+  color: #ffd700;
+}
+
+.eventDetails {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-size: 14px;
+  color: #00bcd4;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.status.live {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.conditions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.conditionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.conditionItem span:first-child {
+  font-size: 12px;
+  color: #666;
+}
+
+.conditionItem span:last-child {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.scoreBoard {
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.surferScore {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.surferName {
+  min-width: 150px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.waves {
+  display: flex;
+  gap: 8px;
+}
+
+.wave {
+  padding: 4px 8px;
+  background-color: #e0f7fa;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+.total {
+  font-size: 16px;
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+.timeRemaining {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.statGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.statTitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.statValues {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.statValues span {
+  font-size: 14px;
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+.surfers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.surfer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.surfer:hover {
+  background-color: #f0f0f0;
+}
+
+.surferInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.surferDetails {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.country {
+  padding-right: 8px;
+  border-right: 1px solid #ddd;
+}
+
+.rank {
+  color: #00bcd4;
+  font-weight: 500;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.market {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.marketName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.optionName {
+  font-size: 14px;
+  color: #666;
+}
+
+.oddsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.oddsValue {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.oddsValue.back {
+  background-color: #e0f7fa;
+  color: #00bcd4;
+}
+
+.oddsValue.back:hover {
+  background-color: #00bcd4;
+  color: white;
+  border-color: #00bcd4;
+}
+
+.oddsValue.lay {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+.oddsValue.lay:hover {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.oddsValue.locked {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockIcon {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .filterButton {
+    white-space: nowrap;
+  }
+
+  .eventCard {
+    padding: 12px;
+  }
+
+  .conditions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .statistics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .surferScore {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .surferName {
+    min-width: auto;
+  }
+
+  .waves {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .surfer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .surferInfo {
+    width: 100%;
+    order: 1;
+  }
+
+  .surferDetails {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .country {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .oddsBox {
+    width: 100%;
+    order: 2;
+  }
+
+  .markets {
+    gap: 8px;
+  }
+
+  .option {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .optionName {
+    width: 100%;
+  }
+
+  .oddsValue {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

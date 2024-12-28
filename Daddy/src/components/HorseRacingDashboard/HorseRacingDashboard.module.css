@@ -1,0 +1,336 @@
+.dashboard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboardHeader {
+  margin-bottom: 20px;
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mainTitle h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.titleIcon {
+  font-size: 24px;
+  color: #ff6b00;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+
+.tab:hover {
+  color: #ff6b00;
+  background: #fff8f3;
+}
+
+.tab.active {
+  color: #ff6b00;
+  background: #fff8f3;
+  font-weight: 600;
+}
+
+.raceCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.raceCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.raceHeader {
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8533 100%);
+  padding: 20px;
+  color: white;
+}
+
+.raceTitle {
+  margin-bottom: 20px;
+}
+
+.raceMeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.raceNumber {
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.raceTime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.liveIndicator {
+  color: #4caf50;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.venueInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.raceClass {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.raceDetails {
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.detailsRow {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 12px;
+}
+
+.detailsRow:last-child {
+  margin-bottom: 0;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.runnersTable {
+  padding: 20px;
+}
+
+.runnersTable table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.runnersTable th {
+  text-align: left;
+  padding: 15px 12px;
+  border-bottom: 2px solid #ff6b00;
+  font-weight: 600;
+  color: #ff6b00;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.runnerRow {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.runnerRow td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.runnerRow:hover td {
+  background-color: #fff8f3;
+}
+
+.runnerRow.selected td {
+  background-color: #fff3e0;
+}
+
+.drawNumber {
+  font-weight: 600;
+  color: #ff6b00;
+  text-align: center;
+}
+
+.horseName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.number {
+  background: #ff6b00;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.silks {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.connections {
+  font-size: 14px;
+}
+
+.jockey {
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.trainer {
+  color: #666;
+}
+
+.form {
+  font-family: monospace;
+}
+
+.recentForm {
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.formDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.info {
+  font-size: 14px;
+}
+
+.info div {
+  color: #333;
+}
+
+.info small {
+  color: #666;
+}
+
+.oddsButton {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 90px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.backButton {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.backButton:hover {
+  background: #c8e6c9;
+  transform: translateY(-1px);
+}
+
+.backButton.selected {
+  background: #66bb6a;
+  color: white;
+  border-color: #43a047;
+}
+
+.layButton {
+  background: #fbe9e7;
+  color: #d84315;
+  border: 1px solid #ffccbc;
+}
+
+.layButton:hover {
+  background: #ffccbc;
+  transform: translateY(-1px);
+}
+
+.layButton.selected {
+  background: #ff7043;
+  color: white;
+  border-color: #f4511e;
+}
+
+.oddsButton:disabled {
+  background: #f5f5f5;
+  color: #bdbdbd;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.raceStats {
+  display: flex;
+  gap: 30px;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.statItem svg {
+  color: #ff6b00;
+}

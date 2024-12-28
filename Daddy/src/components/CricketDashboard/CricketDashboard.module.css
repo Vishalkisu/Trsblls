@@ -1,0 +1,183 @@
+.dashboard {
+  width: 1000px;
+  margin-right: 240px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #1976d2;
+}
+
+h1 {
+  color: #333;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tableContainer {
+  width: 1000px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #f5f5f5;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.matchRow {
+  transition: background-color 0.2s;
+}
+
+.matchRow:hover {
+  background-color: #f8f9fa;
+}
+
+.liveMatch {
+  background-color: #fff8e1;
+}
+
+.liveMatch:hover {
+  background-color: #fff3cd;
+}
+
+.matchInfo {
+  min-width: 300px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.statusBadge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.live {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.upcoming {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.bookmarkBadge {
+  color: #ffc107;
+}
+
+.teams {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.competition {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.score {
+  color: #1976d2;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.additionalInfo {
+  color: #666;
+  font-size: 13px;
+}
+
+.oddsHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #999;
+}
+
+.oddsCell {
+  min-width: 140px;
+}
+
+.oddsContainer {
+  display: flex;
+  gap: 4px;
+}
+
+.oddsButton {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 60px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.backButton {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.backButton:hover {
+  background: #bbdefb;
+}
+
+.layButton {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.layButton:hover {
+  background: #f8bbd0;
+}
+
+.lockedOdds {
+  background: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,102 @@
+.filterContainer {
+  width: 82.5%;
+  background: #0a0a0a;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-left: 17.5%;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(76, 175, 80, 0.3) rgba(0, 0, 0, 0.2);
+}
+
+.filters::-webkit-scrollbar {
+  height: 6px;
+}
+
+.filters::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 3px;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterItem:hover {
+  background: #1a1a1a;
+  border-color: #4caf50;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.filterItem:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 1rem;
+  color: #4caf50;
+}
+
+.name {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.count {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin-left: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  .filterItem {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    font-size: 0.9rem;
+  }
+
+  .count {
+    font-size: 0.75rem;
+    padding: 1px 4px;
+  }
+}

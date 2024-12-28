@@ -1,0 +1,333 @@
+.dashboard {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #151515;
+  padding: 12px 20px;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.titleIcon {
+  font-size: 22px;
+  color: #4caf50;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #4caf50;
+}
+
+.tableContainer {
+  width: 100%;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+.table th {
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: #4caf50;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.matchRow {
+  transition: background-color 0.2s;
+}
+
+.matchRow:hover {
+  background-color: #252525;
+}
+
+.liveMatch {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.liveMatch:hover {
+  background-color: rgba(76, 175, 80, 0.15);
+}
+
+.matchInfo {
+  min-width: 300px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.statusBadge {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #252525;
+}
+
+.live {
+  background: #4caf50;
+  color: white;
+}
+
+.upcoming {
+  background: #252525;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.teams {
+  font-weight: 500;
+  margin: 4px 0;
+  color: #ffffff;
+}
+
+.competition {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.score {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.additionalInfo {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+.oddsHeader {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.oddsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.oddsButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 70px;
+  text-align: center;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.oddsButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.backOdds {
+  background: #BBDEFB;
+  color: #1976D2;
+}
+
+.backOdds:hover:not(:disabled) {
+  background: #90CAF9;
+}
+
+.layOdds {
+  background: #F8BBD0;
+  color: #C2185B;
+  border: 1px solid rgba(194, 24, 91, 0.2);
+}
+
+.layOdds:hover:not(:disabled) {
+  background: #F48FB1;
+  border-color: #C2185B;
+}
+
+.locked {
+  background: #1f1f1f;
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.locked:hover {
+  transform: none;
+}
+
+.lockIcon {
+  font-size: 0.8rem;
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+@media (max-width: 1100px) {
+  .dashboard {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .tableContainer {
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .matchInfo {
+    min-width: 250px;
+  }
+
+  .teams {
+    font-size: 0.9rem;
+  }
+
+  .competition {
+    font-size: 0.8rem;
+  }
+
+  .oddsButton {
+    padding: 6px 10px;
+    min-width: 60px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    transform: translateX(0) !important;
+    position: relative;
+    left: 0;
+    font-size: 12px;
+  }
+
+  .dashboard::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dashboard {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .tableContainer {
+    padding: 8px;
+    overflow-x: hidden;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0;
+  }
+
+  .tableContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tableContainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .header {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100% !important;
+    border-radius: 0;
+  }
+
+  .title h1 {
+    font-size: 14px;
+  }
+
+  .titleIcon {
+    font-size: 16px;
+  }
+
+  .table {
+    width: 100% !important;
+    font-size: 11px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+  }
+
+  .matchInfo {
+    min-width: 150px;
+  }
+
+  .teams {
+    font-size: 11px;
+  }
+
+  .competition,
+  .score,
+  .additionalInfo {
+    font-size: 10px;
+  }
+
+  .oddsButton {
+    padding: 3px 6px;
+    min-width: 40px;
+    font-size: 10px;
+  }
+
+  .statusBadge {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+}

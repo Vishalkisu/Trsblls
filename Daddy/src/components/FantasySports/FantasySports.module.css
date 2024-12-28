@@ -1,0 +1,372 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.searchContainer {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    color: #666;
+}
+
+.searchBox input {
+    width: 100%;
+    padding: 10px 35px 10px 35px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+}
+
+.searchBox input:focus {
+    outline: none;
+    border-color: #ff6b00;
+}
+
+.clearButton {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.clearButton:hover {
+    color: #ff6b00;
+}
+
+.sportsMenu {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sportButton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sportButton:hover {
+    background-color: #333;
+    border-color: #ff6b00;
+}
+
+.sportButton.active {
+    background-color: #ff6b00;
+    border-color: #ff6b00;
+}
+
+.sportIcon {
+    font-size: 20px;
+}
+
+.matchCount {
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* Main Content */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.headerLeft h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filterButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+    background-color: #333;
+    border-color: #ff6b00;
+}
+
+.filterButton.active {
+    background-color: #ff6b00;
+    border-color: #ff6b00;
+}
+
+.filterIcon {
+    font-size: 14px;
+}
+
+.sortButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sortButton:hover {
+    background-color: #333;
+    border-color: #ff6b00;
+}
+
+.matchesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.matchCard {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.matchCard:hover {
+    transform: translateY(-5px);
+}
+
+.cardImage {
+    position: relative;
+    width: 100%;
+    height: 160px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featuredBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.cardContent {
+    padding: 15px;
+}
+
+.tournament {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tournament h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #ff6b00;
+}
+
+.timeRemaining {
+    color: #666;
+    font-size: 14px;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.vs {
+    color: #666;
+}
+
+.prizeInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.prizePool, .entryFee {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prizePool span, .entryFee span {
+    color: #666;
+    font-size: 12px;
+}
+
+.prizePool strong, .entryFee strong {
+    color: #fff;
+    font-size: 16px;
+}
+
+.progress {
+    position: relative;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #ff6b00;
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    color: #666;
+    font-size: 12px;
+}
+
+.joinButton, .loginButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff6b00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.joinButton:hover, .loginButton:hover {
+    background-color: #ff8533;
+}
+
+/* Right Sidebar */
+.rightSidebar {
+    width: 300px;
+    min-width: 300px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.rightSidebarContent {
+    color: #fff;
+}
+
+.noMatch {
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+    .rightSidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .matchesGrid {
+        grid-template-columns: 1fr;
+    }
+}

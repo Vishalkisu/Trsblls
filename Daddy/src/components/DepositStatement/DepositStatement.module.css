@@ -1,0 +1,587 @@
+/* Enhanced Deposit Statement Styles */
+.depositStatementContainer {
+  background-color: var(--dark-background-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.pageTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.pageTitle h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin: 0;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.pageTitle h1:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.controlPanel {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-text-color);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--dark-background-secondary);
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.filterContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dateFilter, .typeFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dateInput, .typeDropdown {
+  padding: 10px;
+  background-color: var(--dark-background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+
+.typeDropdown {
+  min-width: 150px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #121212;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.depositTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.depositTable thead {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.depositTable th {
+  padding: 15px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.depositTable th::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.depositTable th:hover::after {
+  transform: scaleX(1);
+}
+
+.depositTable tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.depositTable tbody tr::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.depositTable tbody tr:hover::after {
+  transform: scaleX(1);
+}
+
+.depositTable td {
+  padding: 12px 15px;
+  color: var(--primary-text-color);
+}
+
+.noRecords {
+  text-align: center;
+  color: var(--muted-text-color);
+  padding: 20px;
+}
+
+.balanceCard {
+  background-color: rgba(0, 128, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0 1rem 2rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  display: inline-block;
+}
+
+.balanceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    rgba(0, 255, 0, 0) 0%,
+    rgba(0, 255, 0, 0.3) 50%,
+    rgba(0, 255, 0, 0) 100%
+  );
+}
+
+.balanceCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    rgba(0, 255, 0, 0) 0%,
+    rgba(0, 255, 0, 0.2) 50%,
+    rgba(0, 255, 0, 0) 100%
+  );
+}
+
+.balanceInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balanceLabel {
+  font-size: 1rem;
+  color: rgba(0, 255, 0, 0.8);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.balanceAmount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ff00;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.currencySymbol {
+  font-size: 1.8rem;
+  color: rgba(0, 255, 0, 0.9);
+  font-weight: 500;
+}
+
+.balanceIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.balanceCard:hover .balanceIcon {
+  transform: scale(1.1);
+  background: rgba(0, 255, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.balanceCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 255, 0, 0.15);
+}
+
+.searchAndActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.actionIcons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.actionButton {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--muted-text-color);
+  cursor: pointer;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton:hover {
+  color: var(--primary-color);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.actionButton.active {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.selectedCount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.exportWrapper {
+  position: relative;
+}
+
+.exportMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--dark-background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.exportMenu::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: var(--dark-background-secondary);
+  border-left: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  transform: rotate(45deg);
+}
+
+.exportMenu button {
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: var(--primary-text-color);
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.exportMenu button:hover {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--primary-color);
+}
+
+/* Delete Modal Styles */
+.deleteModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.deleteModalContent {
+  background: var(--dark-background-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deleteModalContent h3 {
+  color: #ff4444;
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+}
+
+.deleteModalContent p {
+  color: var(--primary-text-color);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.deleteModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelButton,
+.deleteButton {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cancelButton {
+  background: transparent;
+  color: var(--primary-text-color);
+  border: 1px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.deleteButton {
+  background: #ff4444;
+  color: white;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  background: #ff2020;
+}
+
+.deleteButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Delete Spinner */
+.deleteSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Table Checkbox Styles */
+.depositTable th:first-child,
+.depositTable td:first-child {
+  width: 40px;
+  text-align: center;
+}
+
+.depositTable input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.depositTable tr.selected {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .depositStatementContainer {
+    margin-top:180px;
+  }
+  .filterContainer {
+    flex-direction: column;
+  }
+  
+  .balanceCard {
+    margin: 1rem;
+    padding: 20px;
+  }
+  
+  .balanceAmount {
+    font-size: 2rem;
+  }
+  
+  .currencySymbol {
+    font-size: 1.5rem;
+  }
+  
+  .balanceIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchAndActions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .actionIcons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .actionButton {
+    padding: 6px;
+    font-size: 16px;
+  }
+
+  .exportMenu {
+    right: -5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .actionIcons {
+    justify-content: center;
+  }
+
+  .actionButton {
+    padding: 8px;
+    font-size: 20px;
+  }
+
+  .exportMenu {
+    right: -40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .deleteModalContent {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .deleteModalActions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .cancelButton,
+  .deleteButton {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .depositTable input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+}

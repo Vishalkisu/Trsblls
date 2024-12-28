@@ -1,0 +1,53 @@
+.bannerWrapper {
+  width: calc(100% - 17.5% - 100px);
+  height:280px;
+  position: relative;
+  margin-left: 17.5%;
+  margin-right: 230px;
+  top:130px;
+  margin-bottom:130px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .bannerWrapper {
+    height:250px;
+    width: 100%;
+    margin-left:0%;
+    top:140px;
+    margin-bottom: 142px;
+
+   }
+}
+
+@media screen and (max-width: 480px) {
+  .bannerWrapper {
+    height: 150px;
+    top:138px;
+    margin-bottom:140;
+
+  }
+}

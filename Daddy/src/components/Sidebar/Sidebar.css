@@ -1,0 +1,367 @@
+/* Mobile Toggle Button */
+/* Removed */
+
+/* Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar Header */
+/* Removed */
+
+/* Sidebar Base Styles */
+.sidebar {
+  width: 250px;
+  margin-top: 10px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 120px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Container Styles */
+.sidebar-container {
+  position: relative;
+}
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    top: 120px;
+    left: -250px; /* Start off-screen */
+    height: calc(100vh - 120px);
+    margin-top: 0;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar-container.active .sidebar {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar-container.active .sidebar-overlay {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Improve touch scrolling */
+  .sidebar {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Custom scrollbar for mobile and tablet */
+  .sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+
+  /* Adjust sub-menu styles for mobile and tablet */
+  .sub-menu {
+    max-height: none;
+    background: #0f0f0f;
+  }
+
+  .category-list li {
+    padding: 15px;
+  }
+
+  .category-list li:hover {
+    padding-left: 18px;
+    background: #151515;
+  }
+
+  /* Make badges more visible */
+  .live {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+
+  /* Adjust spacing for better touch targets */
+  .expand-icon {
+    padding: 10px;
+    margin: -10px;
+  }
+}
+
+.sidebar-section {
+  margin-bottom: 20px;
+  background: #0a0a0a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sidebar-section h3.section-title {
+  background: #151515;
+  color: #4caf50;
+  padding: 12px 15px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-section h3.section-title svg {
+  color: #4caf50;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #0a0a0a;
+}
+
+.category-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+  flex-wrap: wrap;
+}
+
+.category-list li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-list li:hover {
+  background: #151515;
+  border-left-color: #666;
+  color: #ffffff;
+}
+
+.category-list li.active {
+  background: #151515;
+  border-left-color: #666;
+  color: #ffffff;
+}
+
+.category-list li svg {
+  margin-right: 12px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  color: #4caf50;
+}
+
+/* Calendar Icons */
+li svg[class*="Calendar"] {
+  color: #1e88e5;
+}
+
+/* Racing Icons */
+li svg[class*="Horse"] {
+  color: #8e44ad;
+}
+
+li svg[class*="Run"] {
+  color: #e67e22;
+}
+
+/* Sports Icons */
+li svg[class*="Cricket"] {
+  color: #2ecc71;
+}
+
+li svg[class*="Football"] {
+  color: #e74c3c;
+}
+
+li svg[class*="Tennis"],
+li svg[class*="TennisBall"] {
+  color: #f1c40f;
+}
+
+li svg[class*="Basketball"] {
+  color: #d35400;
+}
+
+li svg[class*="Game"] {
+  color: #9b59b6;
+}
+
+li svg[class*="Boxing"] {
+  color: #c0392b;
+}
+
+li svg[class*="Golf"] {
+  color: #27ae60;
+}
+
+li svg[class*="Chess"] {
+  color: #34495e;
+}
+
+li svg[class*="Speed"] {
+  color: #e74c3c;
+}
+
+li svg[class*="Baseball"] {
+  color: #3498db;
+}
+
+.category-list li:hover svg {
+  transform: scale(1.1);
+}
+
+.category-list li span {
+  margin-left: auto;
+  background-color: #151515;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.category-list li:hover span {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Sub-menu styles */
+.sub-menu {
+  width: 100%;
+  margin-top: 8px;
+  padding-left: 30px;
+  list-style: none;
+  display: none;
+  background: #0f0f0f;
+}
+
+.expanded .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  padding: 8px 12px;
+  font-size: 13px;
+  border-left: none;
+  border-bottom: none;
+  color: #555;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.sub-menu li:hover {
+  background-color: rgba(26, 35, 126, 0.05);
+  padding-left: 15px;
+}
+
+.expand-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+.live {
+  margin-left: auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  flex: 1;
+  transition: all 0.2s ease;
+}
+
+.category-link:hover {
+  color: #ffffff;
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.expand-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}

@@ -1,0 +1,100 @@
+.mobile-casino {
+  display: none;
+  background: #151515;
+  border-radius: 8px;
+  margin: 20px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-header {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-header h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.casino-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+
+.casino-game {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background: #1a1a1a;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.casino-game:hover {
+  transform: translateY(-2px);
+}
+
+.casino-game img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-info {
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.game-info span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Show only on mobile and tablet */
+@media screen and (max-width: 1024px) {
+  .mobile-casino {
+    display: block;
+  }
+}
+
+/* Adjust grid for smaller screens */
+@media screen and (max-width: 480px) {
+  .casino-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .casino-game img {
+    height: 80px;
+  }
+
+  .game-info span {
+    font-size: 12px;
+  }
+}

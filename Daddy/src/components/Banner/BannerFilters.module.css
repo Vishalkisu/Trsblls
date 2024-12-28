@@ -1,0 +1,96 @@
+.filterContainer {
+  width:auto;
+  background: linear-gradient(135deg, #ff8a00 0%, #ff5722 100%);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 0 20px;
+  max-width: 10px;
+  margin: 0 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 87, 34, 0.5) rgba(0, 0, 0, 0.2);
+}
+
+.filters::-webkit-scrollbar {
+  height: 6px;
+}
+
+.filters::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background: rgba(255, 87, 34, 0.5);
+  border-radius: 3px;
+}
+
+.filters::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 87, 34, 0.7);
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.filterItem.active {
+  background: #ff5722;
+  border-color: #ff5722;
+  color: white;
+}
+
+.icon {
+  font-size: 1rem;
+  color: #ffd700;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.count {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  margin-left: 2px;
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    padding: 10px 0;
+  }
+
+  .filterItem {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    font-size: 0.9rem;
+  }
+
+  .count {
+    font-size: 0.75rem;
+  }
+}

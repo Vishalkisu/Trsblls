@@ -1,0 +1,367 @@
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.sportIcon {
+  color: #ff6b00;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.racesContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.raceCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #ff6b00;
+}
+
+.raceCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.raceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.raceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.competition {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.event {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.stage {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+.bookmark {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bookmark.active {
+  color: #ffd700;
+}
+
+.raceDetails {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-size: 14px;
+  color: #ff6b00;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.status.live {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.stageInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.distance {
+  font-weight: 600;
+  color: #ff6b00;
+}
+
+.type {
+  text-align: right;
+}
+
+.finish {
+  color: #333;
+}
+
+.elevation {
+  text-align: right;
+  font-weight: 500;
+}
+
+.situation {
+  background-color: #fff5e6;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.remaining {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff6b00;
+  margin-bottom: 8px;
+}
+
+.gaps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.groupName {
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+}
+
+.riders {
+  flex: 1;
+  color: #666;
+}
+
+.gap {
+  font-weight: 500;
+  color: #ff6b00;
+  min-width: 60px;
+  text-align: right;
+}
+
+.riders {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.rider:hover {
+  background-color: #f0f0f0;
+}
+
+.position {
+  font-weight: 600;
+  color: #ff6b00;
+  min-width: 24px;
+  text-align: center;
+}
+
+.riderInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 500;
+  color: #333;
+}
+
+.team {
+  font-size: 12px;
+  color: #666;
+}
+
+.jersey {
+  font-size: 12px;
+  color: #ff6b00;
+  font-weight: 500;
+}
+
+.oddsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.oddsValue {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.oddsValue.back {
+  background-color: #fff5e6;
+  color: #ff6b00;
+}
+
+.oddsValue.back:hover {
+  background-color: #ff6b00;
+  color: white;
+  border-color: #ff6b00;
+}
+
+.oddsValue.lay {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+.oddsValue.lay:hover {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.oddsValue.locked {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockIcon {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .filterButton {
+    white-space: nowrap;
+  }
+
+  .raceCard {
+    padding: 12px;
+  }
+
+  .stageInfo {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .type, .elevation {
+    text-align: left;
+  }
+
+  .group {
+    flex-wrap: wrap;
+  }
+
+  .groupName {
+    width: 100%;
+  }
+
+  .rider {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .riderInfo {
+    width: 100%;
+    order: 1;
+  }
+
+  .oddsBox {
+    width: 100%;
+    order: 2;
+  }
+
+  .oddsValue {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

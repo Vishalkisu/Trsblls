@@ -1,0 +1,138 @@
+.mobile-new-launched {
+  display: none;
+  background: #1a1a1a;
+  border-radius: 8px;
+  margin: 20px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-header {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-header h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.new-launched-content {
+  padding: 15px;
+}
+
+.promo-banner-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.promo-slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.promo-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.promo-slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  scroll-snap-align: start;
+}
+
+.promo-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.game-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #ffffff;
+}
+
+.game-overlay h4 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.game-overlay p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.play-now {
+  background: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.play-now:hover {
+  background: #388e3c;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #4caf50;
+}
+
+/* Show only on mobile and tablet */
+@media screen and (max-width: 1024px) {
+  .mobile-new-launched {
+    display: block;
+  }
+}

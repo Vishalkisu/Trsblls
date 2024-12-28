@@ -1,0 +1,14 @@
+For now, you can use any slot game images you have. Place them in this directory with the following names:
+- gates-of-olympus.jpg
+- sweet-bonanza.jpg
+- starburst.jpg
+- book-of-dead.jpg
+- buffalo-king.jpg
+
+Or you can temporarily use these URLs in the Slots.tsx component:
+
+gates-of-olympus: https://pragmaticplay.imgix.net/games/gates-of-olympus.png
+sweet-bonanza: https://pragmaticplay.imgix.net/games/sweet-bonanza.png
+starburst: https://www.netent.com/en/wp-content/uploads/sites/6/2019/02/starburst-logo.png
+book-of-dead: https://www.playngo.com/wp-content/uploads/2019/01/BookofDead_Logo.png
+buffalo-king: https://pragmaticplay.imgix.net/games/buffalo-king-megaways.png

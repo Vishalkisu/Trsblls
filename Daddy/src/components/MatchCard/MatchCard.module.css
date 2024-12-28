@@ -1,0 +1,111 @@
+.matchCard {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(255, 87, 34, 0.1);
+    border-left: 4px solid #ff5722;
+    transition: all 0.2s ease;
+}
+
+.matchCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 87, 34, 0.2);
+}
+
+.header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.time {
+    background: rgba(255, 87, 34, 0.2);
+    color: #ff5722;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.oddsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.teamOdds {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.teamName {
+    color: #333;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.backButton,
+.layButton {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.backButton {
+    background: linear-gradient(135deg, #ff5722, #ffa07a);
+    color: white;
+}
+
+.backButton:hover {
+    background: linear-gradient(135deg, #ff9900, #ff5722);
+    transform: translateY(-1px);
+}
+
+.layButton {
+    background: linear-gradient(135deg, #dc3545, #ff5722);
+    color: white;
+}
+
+.layButton:hover {
+    background: linear-gradient(135deg, #ff3737, #dc3545);
+    transform: translateY(-1px);
+}
+
+.selected {
+    box-shadow: 0 0 0 2px #ff5722;
+    transform: scale(1.05);
+}
+
+/* Add hover effect for buttons */
+.backButton:hover,
+.layButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Add active/pressed effect */
+.backButton:active,
+.layButton:active {
+    transform: translateY(1px);
+}
